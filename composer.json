@@ -1,0 +1,22 @@
+{
+    "name": "smetaniny/tailwindcss-config",
+    "description": "Конфигурация tailwindcss",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Smetaniny",
+            "email": "sm.sergey.v@yandex.ru",
+            "homepage": "https://smetaniny.ru"
+        }
+    ],
+    "homepage": "https://github.com/smetaniny/tailwindcss-config",
+    "keywords": ["Laravel", "Tailwindcss"],
+    "require": {
+        "php": "^8.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "Smetaniny\\TailwindcssConfig\\": "src/"
+        }
+    }
+}
