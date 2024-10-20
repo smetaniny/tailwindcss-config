@@ -5,8 +5,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-return new class extends Migration
-{
+return new class extends Migration {
     /**
      * Run the migrations.
      */
@@ -14,11 +13,13 @@ return new class extends Migration
     {
         Schema::create('tw_animations', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('theme_id')->constrained('tw_themes')->onDelete('cascade');
+
             $table->string('name')->comment('Название анимации');
             $table->string('duration')->comment('Длительность анимации');
             $table->string('timing_function')->comment('Функция временной кривой анимации');
             $table->boolean('infinite')->default(false)->comment('Флаг для бесконечности анимации');
-            $table->foreignId('theme_id')->constrained('tw_themes')->onDelete('cascade');
+
             $table->timestamps();
         });
     }

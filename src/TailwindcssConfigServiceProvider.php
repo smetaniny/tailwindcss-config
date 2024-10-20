@@ -1,10 +1,16 @@
 <?php
+declare(strict_types=1);
 
 namespace Smetaniny\TailwindcssConfig;
 
 use Illuminate\Support\ServiceProvider;
 use Smetaniny\TailwindcssConfig\Commands\SeedCommand;
 
+/**
+ *
+ *
+ * @author Smetanin Sergey
+ */
 class TailwindcssConfigServiceProvider extends ServiceProvider
 {
     /**
@@ -29,6 +35,10 @@ class TailwindcssConfigServiceProvider extends ServiceProvider
         }
     }
 
+    /**
+     *
+     *
+     */
     protected function bootForConsole(): void
     {
         // Регистрируем команду импорта категорий php artisan import:categories

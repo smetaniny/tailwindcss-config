@@ -17,7 +17,9 @@ return new class extends Migration
     {
         Schema::create('tw_themes', function (Blueprint $table) {
             $table->id();
+
             $table->string('name')->comment('Название темы');
+
             $table->timestamps();
         });
     }

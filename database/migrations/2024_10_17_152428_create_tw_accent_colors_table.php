@@ -17,9 +17,11 @@ return new class extends Migration {
     {
         Schema::create('tw_accent_colors', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('theme_id')->constrained('tw_themes')->onDelete('cascade');
+
             $table->string('name')->unique()->comment('Название акцентного цвета');
             $table->string('hex_value')->comment('Значение акцентного цвета в HEX формате или ключевое слово');
-            $table->foreignId('theme_id')->constrained('tw_themes')->onDelete('cascade');
+
             $table->timestamps();
         });
     }

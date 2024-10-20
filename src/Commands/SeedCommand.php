@@ -5,8 +5,9 @@ namespace Smetaniny\TailwindcssConfig\Commands;
 
 use Illuminate\Console\Command;
 use Smetaniny\TailwindcssConfig\Commands\Services\SeederInvokerCommand;
-use Smetaniny\TailwindcssConfig\seeders\TwAccentColors;
+use Smetaniny\TailwindcssConfig\seeders\TwAccentColorsSeed;
 use Smetaniny\TailwindcssConfig\seeders\TwAnimationsSeed;
+use Smetaniny\TailwindcssConfig\seeders\TwAriaSeed;
 use Smetaniny\TailwindcssConfig\seeders\TwContentSeed;
 use Smetaniny\TailwindcssConfig\seeders\TwDarkModeSeed;
 use Smetaniny\TailwindcssConfig\seeders\TwThemesSeed;
@@ -33,8 +34,9 @@ class SeedCommand extends Command
         $seederInvoker->addCommand(app(TwThemesSeed::class));
         $seederInvoker->addCommand(app(TwContentSeed::class));
         $seederInvoker->addCommand(app(TwDarkModeSeed::class));
-        $seederInvoker->addCommand(app(TwAccentColors::class));
+        $seederInvoker->addCommand(app(TwAccentColorsSeed::class));
         $seederInvoker->addCommand(app(TwAnimationsSeed::class));
+        $seederInvoker->addCommand(app(TwAriaSeed::class));
 
         // Запускаем все сидеры
         $seederInvoker->runAll();

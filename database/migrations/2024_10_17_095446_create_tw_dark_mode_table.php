@@ -17,12 +17,12 @@ return new class extends Migration
     {
         Schema::create('tw_dark_mode', function (Blueprint $table) {
             $table->id();
-            $table->enum('mode', ['media', 'selector'])
-                ->default('media')
-                ->comment('Режим тёмной темы: media - зависит от настроек устройства, selector - с помощью CSS класса');
             $table->foreignId('theme_id')
                 ->constrained('tw_themes')
                 ->onDelete('cascade');
+            $table->enum('mode', ['media', 'selector'])
+                ->default('media')
+                ->comment('Режим тёмной темы: media - зависит от настроек устройства, selector - с помощью CSS класса');
             $table->timestamps();
         });
     }

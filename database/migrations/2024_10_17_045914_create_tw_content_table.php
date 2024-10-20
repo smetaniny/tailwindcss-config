@@ -18,7 +18,9 @@ return new class extends Migration {
         // Создаем таблицу tw_content
         Schema::create('tw_content', function (Blueprint $table) {
             $table->id();
+
             $table->string('value')->comment('Путь к HTML-шаблонам, JS компонентам и другим файлам');
+
             $table->timestamps();
         });
     }

@@ -24,6 +24,7 @@ class TwDarkModeSeed implements SeederInterface
             // Вставляем запись в таблицу
             DB::table('tw_dark_mode')->insert([
                 [
+                    'theme_id' => 1,
                     'mode' => 'media',
                     'created_at' => now(),
                     'updated_at' => now(),

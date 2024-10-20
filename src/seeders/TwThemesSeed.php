@@ -25,6 +25,7 @@ class TwThemesSeed implements SeederInterface
         // Если темы нет, создаем новую тему
         if (is_null($themeId)) {
             DB::table('tw_themes')->insertGetId([
+                'theme_id' => 1,
                 'name' => 'default',
                 'created_at' => now(),
                 'updated_at' => now(),
