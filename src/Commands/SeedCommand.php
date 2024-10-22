@@ -13,6 +13,8 @@ use Smetaniny\TailwindcssConfig\seeders\TwBackdropBlurSeed;
 use Smetaniny\TailwindcssConfig\seeders\TwBackdropBrightnessSeed;
 use Smetaniny\TailwindcssConfig\seeders\TwBackdropContrastSeed;
 use Smetaniny\TailwindcssConfig\seeders\TwBackdropGrayscaleSeed;
+use Smetaniny\TailwindcssConfig\seeders\TwBackdropHueRotateSeed;
+use Smetaniny\TailwindcssConfig\seeders\TwBackdropInvertSeed;
 use Smetaniny\TailwindcssConfig\seeders\TwContentSeed;
 use Smetaniny\TailwindcssConfig\seeders\TwDarkModeSeed;
 use Smetaniny\TailwindcssConfig\seeders\TwThemesSeed;
@@ -47,6 +49,8 @@ class SeedCommand extends Command
         $seederInvoker->addCommand(app(TwBackdropBrightnessSeed::class));
         $seederInvoker->addCommand(app(TwBackdropContrastSeed ::class));
         $seederInvoker->addCommand(app(TwBackdropGrayscaleSeed ::class));
+        $seederInvoker->addCommand(app(TwBackdropHueRotateSeed ::class));
+        $seederInvoker->addCommand(app(TwBackdropInvertSeed ::class));
 
         // Запускаем все сидеры
         $seederInvoker->runAll();
