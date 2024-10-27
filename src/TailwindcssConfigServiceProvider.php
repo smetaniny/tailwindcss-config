@@ -41,7 +41,7 @@ class TailwindcssConfigServiceProvider extends ServiceProvider
      */
     protected function bootForConsole(): void
     {
-        // Регистрируем команду импорта категорий php artisan import:categories
+        // Регистрируем команду php artisan import:seed-tailwindcss-config
         $this->commands([
             SeedCommand::class,
         ]);
